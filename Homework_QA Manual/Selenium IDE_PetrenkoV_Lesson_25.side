@@ -1,0 +1,1312 @@
+{
+  "id": "74db1212-5aa2-47df-ab20-e96a9232cf8c",
+  "version": "2.0",
+  "name": "Beetroot_PetrenkoV",
+  "url": "https://avrora.ua/",
+  "tests": [{
+    "id": "3eeb06b5-9198-4e99-b45a-138c94982ff2",
+    "name": "* Add Products To The Cart",
+    "commands": [{
+      "id": "ee17e293-e5d5-43e9-abe0-a73a76f0cbfa",
+      "comment": "Open avrora.ua",
+      "command": "open",
+      "target": "/",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "a7e6c65e-c552-44c8-ad38-3da5f3ccada0",
+      "comment": "Click Тільки на сайті",
+      "command": "click",
+      "target": "linkText=Тільки на сайті",
+      "targets": [
+        ["linkText=Тільки на сайті", "linkText"],
+        ["css=.ty-menu__item:nth-child(7) > .ty-menu__item-link", "css:finder"],
+        ["xpath=//a[contains(text(),'Тільки на сайті')]", "xpath:link"],
+        ["xpath=//div[@id='tygh_main_container']/div[2]/div/div/div/div[2]/div/ul/li[7]/a", "xpath:idRelative"],
+        ["xpath=//a[contains(@href, 'https://avrora.ua/tilki-na-sayti/')]", "xpath:href"],
+        ["xpath=//li[7]/a", "xpath:position"],
+        ["xpath=//a[contains(.,'Тільки на сайті')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "9e9dbfd1-d9c8-48f0-8e16-a1835715ddb8",
+      "comment": "Click Dropdown sorting",
+      "command": "click",
+      "target": "id=sw_elm_sort_fields",
+      "targets": [
+        ["id=sw_elm_sort_fields", "id"],
+        ["linkText=Спочатку новіші", "linkText"],
+        ["css=#sw_elm_sort_fields", "css:finder"],
+        ["xpath=//a[contains(text(),'Спочатку новіші')]", "xpath:link"],
+        ["xpath=//a[@id='sw_elm_sort_fields']", "xpath:attributes"],
+        ["xpath=//div[@id='elm_sort_wrap']/div/div/a", "xpath:idRelative"],
+        ["xpath=//div[3]/div/div[4]/div/div/div/div[2]/div/div/a", "xpath:position"],
+        ["xpath=//a[contains(.,'Спочатку новіші')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "e674bc49-dd8d-4eb7-a881-d3b1ae4fc9ee",
+      "comment": "Click За популярністю",
+      "command": "click",
+      "target": "linkText=За популярністю",
+      "targets": [
+        ["linkText=За популярністю", "linkText"],
+        ["css=.sort-by-popularity-desc:nth-child(4) > .cm-ajax", "css:finder"],
+        ["xpath=//a[contains(text(),'За популярністю')]", "xpath:link"],
+        ["xpath=//ul[@id='elm_sort_fields']/li[4]/a", "xpath:idRelative"],
+        ["xpath=//a[contains(@href, 'https://avrora.ua/tilki-na-sayti/?sort_by=popularity&sort_order=desc')]", "xpath:href"],
+        ["xpath=//div[4]/div/div/div/div[2]/div/div/ul/li[4]/a", "xpath:position"],
+        ["xpath=//a[contains(.,'За популярністю')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "a7895e8d-7d4f-4f2a-8fd1-7c5031165fcc",
+      "comment": "Assert element present товар Вішалка-стійка для одягу подвійна пересувна",
+      "command": "assertElementPresent",
+      "target": "xpath=//div[@id='read_more_1']/div/div[11]/div",
+      "targets": [
+        ["css=.ty-column4:nth-child(11) > .ty-grid-list__item", "css:finder"],
+        ["xpath=//div[@id='read_more_1']/div/div[11]/div", "xpath:idRelative"],
+        ["xpath=//div[5]/div[2]/div/div/div[2]/div/div[11]/div", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "2884afdd-4e09-442f-92f0-163c6802b9b5",
+      "comment": "Click Вішалка-стійка для одягу подвійна пересувна",
+      "command": "click",
+      "target": "linkText=Вішалка-стійка для одягу подвійна пересувна",
+      "targets": [
+        ["css=.ty-column4:nth-child(11) > .ty-grid-list__item", "css:finder"],
+        ["xpath=//div[@id='read_more_1']/div/div[11]/div", "xpath:idRelative"],
+        ["xpath=//div[5]/div[2]/div/div/div[2]/div/div[11]/div", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "bccb4f11-4742-4bc7-b342-79ee696d8a37",
+      "comment": "Verify text 30 днів на обмін або повернення",
+      "command": "verifyText",
+      "target": "css=.garanty > .h3",
+      "targets": [],
+      "value": "30 днів на обмін або повернення"
+    }, {
+      "id": "56b4f23d-8aa1-40e5-8e38-fe7b4a9bcb47",
+      "comment": "Verify not text Price 1000",
+      "command": "verifyNotText",
+      "target": "id=sec_discounted_price_10852",
+      "targets": [
+        ["id=sec_discounted_price_10852", "id"],
+        ["css=#sec_discounted_price_10852", "css:finder"],
+        ["xpath=//span[@id='sec_discounted_price_10852']", "xpath:attributes"],
+        ["xpath=//span[@id='line_discounted_price_10852']/bdi/span", "xpath:idRelative"],
+        ["xpath=//span/bdi/span", "xpath:position"]
+      ],
+      "value": "1000"
+    }, {
+      "id": "980e1741-1c83-40cd-a327-45246fe9499c",
+      "comment": "Click Відгуки",
+      "command": "click",
+      "target": "linkText=Відгуки(6)",
+      "targets": [
+        ["linkText=Відгуки(6)", "linkText"],
+        ["css=#product_reviews > .ty-tabs__a", "css:finder"],
+        ["xpath=//a[contains(text(),'Відгуки(6)')]", "xpath:link"],
+        ["xpath=//li[@id='product_reviews']/a", "xpath:idRelative"],
+        ["xpath=//div[2]/div[2]/ul/li[3]/a", "xpath:position"],
+        ["xpath=//a[contains(.,'Відгуки(6)')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "6f41a896-07c0-4da3-b98b-1b17ca3be7b0",
+      "comment": "Click Colour",
+      "command": "click",
+      "target": "id=det_img_variant_image_10852_1281_6089",
+      "targets": [
+        ["id=det_img_variant_image_10852_1281_6089", "id"],
+        ["css=#det_img_variant_image_10852_1281_6089", "css:finder"],
+        ["xpath=//img[contains(@src,'https://images.avrora.ua/images/thumbnails/70/70/variant_image/74/86738_101_dfcw-u3.webp')]", "xpath:img"],
+        ["xpath=//img[@id='det_img_variant_image_10852_1281_6089']", "xpath:attributes"],
+        ["xpath=//div[@id='opt_10852_1281']/div/div[2]/img", "xpath:idRelative"],
+        ["xpath=//div[3]/div/div/div/div/div/div[2]/img", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "6d161043-6487-469d-98a2-5f3dd143d70b",
+      "comment": "Click В кошик",
+      "command": "click",
+      "target": "id=button_cart_10852",
+      "targets": [
+        ["id=button_cart_10852", "id"],
+        ["name=dispatch[checkout.add..10852]", "name"],
+        ["css=#button_cart_10852", "css:finder"],
+        ["xpath=//button[@id='button_cart_10852']", "xpath:attributes"],
+        ["xpath=//div[@id='add_to_cart_update_10852']/button", "xpath:idRelative"],
+        ["xpath=//div[5]/div[3]/div/button", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "ef6bd33c-669c-4509-b5ff-3ad4d1ba531d",
+      "comment": "click Продовжити покупки",
+      "command": "click",
+      "target": "linkText=Продовжити покупки",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "63e54a95-6ae6-4b46-aad4-f55776e2dffd",
+      "comment": "Click breadcrumbs Органайзери для зберігання",
+      "command": "click",
+      "target": "css=.ty-breadcrumbs__a--wrap:nth-child(7) span",
+      "targets": [
+        ["css=.ty-breadcrumbs__a--wrap:nth-child(7) span", "css:finder"],
+        ["xpath=//div[@id='breadcrumbs_11']/div/div[4]/a/span", "xpath:idRelative"],
+        ["xpath=//div[4]/div[3]/div/div/div/div/div/div[4]/a/span", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "f4fe628e-ac60-412e-a601-b7d13a58d227",
+      "comment": "Click товар Вішалка-стійка для одягу з полицями пересувна",
+      "command": "click",
+      "target": "xpath=//div[@id='read_more_1']/div/div[5]/div/div/div[2]/div/form/bdi/a",
+      "targets": [
+        ["css=.ty-column4:nth-child(5) .product-title", "css:finder"],
+        ["xpath=(//a[contains(text(),'Вішалка-стійка для одягу з полицями пересувна')])[7]", "xpath:link"],
+        ["xpath=//div[@id='read_more_1']/div/div[5]/div/div/div[2]/div/form/bdi/a", "xpath:idRelative"],
+        ["xpath=(//a[contains(@href, 'https://avrora.ua/vishalka-stiyka-dlya-odyagu-z-policyami-peresuvna/')])[24]", "xpath:href"],
+        ["xpath=//div[5]/div/div/div[2]/div/form/bdi/a", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "f85e84da-4205-4739-9e3c-2ed3d12c304f",
+      "comment": "Verify not editable Про товар",
+      "command": "//verifyNotEditable",
+      "target": "id=sec_discounted_price_11917",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "42418986-734a-4115-93b3-a7623fef49e3",
+      "comment": "Verify editable Product Quantity",
+      "command": "verifyEditable",
+      "target": "id=qty_count_11917",
+      "targets": [
+        ["id=qty_count_11917", "id"],
+        ["name=product_data[11917][amount]", "name"],
+        ["css=#qty_count_11917", "css:finder"],
+        ["xpath=//input[@id='qty_count_11917']", "xpath:attributes"],
+        ["xpath=//div[@id='qty_11917']/div/input", "xpath:idRelative"],
+        ["xpath=//div[2]/div/div/div/input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "27730b04-c616-4500-831e-fe1609316380",
+      "comment": "Assert element not present Banner",
+      "command": "assertElementNotPresent",
+      "target": "id=det_img_667e8784476e0",
+      "targets": [
+        ["id=det_img_667e8784476e0", "id"],
+        ["css=#det_img_667e8784476e0", "css:finder"],
+        ["xpath=//img[@alt='Для краси та стилю']", "xpath:img"],
+        ["xpath=//img[@id='det_img_667e8784476e0']", "xpath:attributes"],
+        ["xpath=//div[@id='swiper-wrapper-e1c7af42a584187f']/div/a/img", "xpath:idRelative"],
+        ["xpath=//div[3]/div/div/div/div[2]/div[2]/div/div/div/div/a/img", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "717546b6-1d63-49bb-af08-06684bfe7d85",
+      "comment": "Click colour",
+      "command": "click",
+      "target": "id=det_img_variant_image_11917_1348_6367",
+      "targets": [
+        ["id=det_img_variant_image_11917_1348_6367", "id"],
+        ["css=#det_img_variant_image_11917_1348_6367", "css:finder"],
+        ["xpath=//img[contains(@src,'https://images.avrora.ua/images/thumbnails/70/70/variant_image/78/86737_005.webp')]", "xpath:img"],
+        ["xpath=//img[@id='det_img_variant_image_11917_1348_6367']", "xpath:attributes"],
+        ["xpath=//div[@id='opt_11917_1348']/div/div/img", "xpath:idRelative"],
+        ["xpath=//div[3]/div/div/div/div/div/div/img", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "2fe7b8a1-e044-4cc1-8df3-e468940cb7cd",
+      "comment": "Click В кошик",
+      "command": "click",
+      "target": "id=button_cart_11917",
+      "targets": [
+        ["id=button_cart_11917", "id"],
+        ["name=dispatch[checkout.add..11917]", "name"],
+        ["css=#button_cart_11917", "css:finder"],
+        ["xpath=//button[@id='button_cart_11917']", "xpath:attributes"],
+        ["xpath=//div[@id='add_to_cart_update_11917']/button", "xpath:idRelative"],
+        ["xpath=//div[5]/div[3]/div/button", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "fcfbb80c-7482-42de-933e-e699a5b7c37b",
+      "comment": "Click Продовжити покупки",
+      "command": "click",
+      "target": "linkText=Продовжити покупки",
+      "targets": [],
+      "value": ""
+    }]
+  }, {
+    "id": "643b7efd-1429-4f09-9d77-accb9492be00",
+    "name": "Placing An Order",
+    "commands": [{
+      "id": "9cb0e729-5323-4a30-9ede-27e4d1912f82",
+      "comment": "Open https://avrora.ua/",
+      "command": "open",
+      "target": "/",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "a2de19f9-ae8a-4157-8c1d-85abc838eed0",
+      "comment": "Click ТОП корисних штук",
+      "command": "click",
+      "target": "xpath=//img[@alt='ТОП корисних штук']",
+      "targets": [
+        ["id=det_img_667d3501bd1fe", "id"],
+        ["css=#det_img_667d3501bd1fe", "css:finder"],
+        ["xpath=//img[@alt='ТОП корисних штук']", "xpath:img"],
+        ["xpath=//img[@id='det_img_667d3501bd1fe']", "xpath:attributes"],
+        ["xpath=//div[@id='tygh_main_container']/div[3]/div/div[2]/div/div[2]/div/div/div[3]/a/img", "xpath:idRelative"],
+        ["xpath=//div[2]/div/div/div[3]/a/img", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "9d6ae7d5-a9d5-4900-a434-48b449d21f44",
+      "comment": "Click Товари для кухні - у повноекранному режимі вікна",
+      "command": "click",
+      "target": "linkText=Товари для кухні",
+      "targets": [
+        ["linkText=Товари для кухні", "linkText"],
+        ["css=li:nth-child(3) > .cm-history", "css:finder"],
+        ["xpath=(//a[contains(text(),'Товари для кухні')])[2]", "xpath:link"],
+        ["xpath=//div[@id='product_filters_189']/div/div/ul/li[3]/a", "xpath:idRelative"],
+        ["xpath=//a[contains(@href, 'https://avrora.ua/top-korisnih-shtuk/?section_id=142')]", "xpath:href"],
+        ["xpath=//div[5]/div/div[2]/div/div/ul/li[3]/a", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "9991f1b8-4401-471b-9b27-9498816174b1",
+      "comment": "Click Посуд для зберігання",
+      "command": "click",
+      "target": "linkText=Посуд для зберігання",
+      "targets": [
+        ["linkText=Посуд для зберігання", "linkText"],
+        ["css=ul:nth-child(2) > li:nth-child(2) > .cm-history", "css:finder"],
+        ["xpath=(//a[contains(text(),'Посуд для зберігання')])[2]", "xpath:link"],
+        ["xpath=//div[@id='product_filters_189']/div/div/ul/li[3]/ul/li[2]/a", "xpath:idRelative"],
+        ["xpath=//a[contains(@href, 'https://avrora.ua/top-korisnih-shtuk/?section_id=159')]", "xpath:href"],
+        ["xpath=//li[3]/ul/li[2]/a", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "302a7934-9224-4f05-94c6-9769a389dd4e",
+      "comment": "Click Підставка для столових приборів пластикова EMHOUSE",
+      "command": "click",
+      "target": "//*[@id=\"det_img_12075\"]",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "c3cabcb8-e82e-41de-9b7f-14614740aab7",
+      "comment": "Assert element present Вибрати колір",
+      "command": "assertElementPresent",
+      "target": "css=#det_img_variant_image_12075_1070_5256",
+      "targets": [
+        ["id=det_img_variant_image_12075_1070_5256", "id"],
+        ["css=#det_img_variant_image_12075_1070_5256", "css:finder"],
+        ["xpath=//img[contains(@src,'https://images.avrora.ua/images/thumbnails/70/70/variant_image/60/66079_68303.webp')]", "xpath:img"],
+        ["xpath=//img[@id='det_img_variant_image_12075_1070_5256']", "xpath:attributes"],
+        ["xpath=//div[@id='opt_12075_1070']/div/div[3]/img", "xpath:idRelative"],
+        ["xpath=//div[3]/div/div/div/div/div/div[3]/img", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "b4695f87-5779-493c-b048-eda33ae20920",
+      "comment": "Click Colour",
+      "command": "click",
+      "target": "id=det_img_variant_image_12075_1070_5256",
+      "targets": [
+        ["id=det_img_variant_image_12075_1070_5256", "id"],
+        ["css=#det_img_variant_image_12075_1070_5256", "css:finder"],
+        ["xpath=//img[contains(@src,'https://images.avrora.ua/images/thumbnails/70/70/variant_image/60/66079_68303.webp')]", "xpath:img"],
+        ["xpath=//img[@id='det_img_variant_image_12075_1070_5256']", "xpath:attributes"],
+        ["xpath=//div[@id='opt_12075_1070']/div/div[3]/img", "xpath:idRelative"],
+        ["xpath=//div[3]/div/div/div/div/div/div[3]/img", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "09093e96-9bc2-428e-8ec3-e4aac2b9c1ed",
+      "comment": "Verify text Самовивіз з магазину",
+      "command": "verifyText",
+      "target": "css=.products-info--item__store > .h3",
+      "targets": [],
+      "value": "Самовивіз з магазину"
+    }, {
+      "id": "a09ef14f-71eb-4ae7-8218-26d95c07801c",
+      "comment": "Click quantity selector",
+      "command": "click",
+      "target": "id=qty_count_12075",
+      "targets": [
+        ["id=qty_count_12075", "id"],
+        ["name=product_data[12075][amount]", "name"],
+        ["css=#qty_count_12075", "css:finder"],
+        ["xpath=//input[@id='qty_count_12075']", "xpath:attributes"],
+        ["xpath=//div[@id='qty_12075']/div/input", "xpath:idRelative"],
+        ["xpath=//div[2]/div/div/div/input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "d054794c-c2a7-4fc2-85c8-67982f20f9f7",
+      "comment": "Type quantity 3",
+      "command": "type",
+      "target": "id=qty_count_12075",
+      "targets": [
+        ["id=qty_count_12075", "id"],
+        ["name=product_data[12075][amount]", "name"],
+        ["css=#qty_count_12075", "css:finder"],
+        ["xpath=//input[@id='qty_count_12075']", "xpath:attributes"],
+        ["xpath=//div[@id='qty_12075']/div/input", "xpath:idRelative"],
+        ["xpath=//div[2]/div/div/div/input", "xpath:position"]
+      ],
+      "value": "3"
+    }, {
+      "id": "2d51b307-ae84-4c18-a19c-c04ce43bed71",
+      "comment": "Click У кошик",
+      "command": "click",
+      "target": "id=button_cart_12075",
+      "targets": [
+        ["id=button_cart_12075", "id"],
+        ["name=dispatch[checkout.add..12075]", "name"],
+        ["css=#button_cart_12075", "css:finder"],
+        ["xpath=//button[@id='button_cart_12075']", "xpath:attributes"],
+        ["xpath=//div[@id='add_to_cart_update_12075']/button", "xpath:idRelative"],
+        ["xpath=//div[5]/div[3]/div/button", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "3fe519fb-ed7b-4369-a2fb-2bb2253b112c",
+      "comment": "Click Продовжити оформлення",
+      "command": "click",
+      "target": "linkText=Продовжити оформлення",
+      "targets": [
+        ["linkText=Продовжити покупки", "linkText"],
+        ["css=.back-btn", "css:finder"],
+        ["xpath=//a[contains(text(),'Продовжити покупки')]", "xpath:link"],
+        ["xpath=//div[10]/div/div/div[3]/div/a", "xpath:position"],
+        ["xpath=//a[contains(.,'Продовжити покупки')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "67aa74ac-79a6-4917-914d-367e5d77aabe",
+      "comment": "Click again Продовжити оформлення",
+      "command": "click",
+      "target": "xpath=//a[contains(text(),'Продовжити оформлення')]",
+      "targets": [
+        ["linkText=Продовжити оформлення", "linkText"],
+        ["css=.ty-btn__primary:nth-child(1)", "css:finder"],
+        ["xpath=//a[contains(text(),'Продовжити оформлення')]", "xpath:link"],
+        ["xpath=//div[@id='checkout_form_wrapper']/div[2]/div[2]/div[2]/a", "xpath:idRelative"],
+        ["xpath=(//a[contains(@href, 'https://avrora.ua/checkout/')])[2]", "xpath:href"],
+        ["xpath=//div[2]/div[2]/a", "xpath:position"],
+        ["xpath=//a[contains(.,'Продовжити оформлення')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }]
+  }, {
+    "id": "3b571f92-aa5a-42a6-90ff-1671913a5c52",
+    "name": "* Search and Add To Fav",
+    "commands": [{
+      "id": "781ddc59-d484-4021-a204-2b0c2940d3a4",
+      "comment": "Create Variable Search",
+      "command": "store",
+      "target": "термомозаїка",
+      "targets": [],
+      "value": "Search"
+    }, {
+      "id": "4d6da5bd-0387-4558-b13c-c8d861709b2d",
+      "comment": "Open avrora.ua",
+      "command": "open",
+      "target": "/",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "ca5ce292-2a65-4304-a2bb-0e519f43f92f",
+      "comment": "Click Пошук",
+      "command": "click",
+      "target": "id=search_input",
+      "targets": [
+        ["id=search_input", "id"],
+        ["name=q", "name"],
+        ["css=#search_input", "css:finder"],
+        ["xpath=//input[@id='search_input']", "xpath:attributes"],
+        ["xpath=//div[@id='ty-search-block']/form/input[9]", "xpath:idRelative"],
+        ["xpath=//input[9]", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "693de1c0-a505-47bf-a566-af35a50ecd73",
+      "comment": "Type Variable Search",
+      "command": "type",
+      "target": "id=search_input",
+      "targets": [
+        ["id=search_input", "id"],
+        ["name=q", "name"],
+        ["css=#search_input", "css:finder"],
+        ["xpath=//input[@id='search_input']", "xpath:attributes"],
+        ["xpath=//div[@id='ty-search-block']/form/input[9]", "xpath:idRelative"],
+        ["xpath=//input[9]", "xpath:position"]
+      ],
+      "value": "${Search}"
+    }, {
+      "id": "5efe361c-4ee5-4bbf-902e-2ca540b27f8d",
+      "comment": "Click Submit",
+      "command": "click",
+      "target": "xpath=//button[@type='submit']",
+      "targets": [
+        ["css=.ty-search-magnifier", "css:finder"],
+        ["xpath=//button[@type='submit']", "xpath:attributes"],
+        ["xpath=//div[@id='ty-search-block']/form/button", "xpath:idRelative"],
+        ["xpath=//form/button", "xpath:position"],
+        ["xpath=//button[contains(.,'_res.search')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "1fd917f0-3434-4d3a-8008-4c6056360a9c",
+      "comment": "Assert element present Товар 1",
+      "command": "assertElementPresent",
+      "target": "xpath=//div[3]/div/div[4]/div[2]/div/div/div/div/div/div",
+      "targets": [
+        ["css=.ty-column4:nth-child(1) > .ty-grid-list__item", "css:finder"],
+        ["xpath=//div[@id='read_more_1']/div/div/div", "xpath:idRelative"],
+        ["xpath=//div[3]/div/div[4]/div[2]/div/div/div/div/div/div", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "36fb333c-32dc-4167-8434-2d93d3d2cd4a",
+      "comment": "Assert element not present Набір для гри в піску",
+      "command": "assertElementNotPresent",
+      "target": "linkText=Набір для гри в піску з декоративною наліпкою GipGo Смайлик 3 предмети в асортименті",
+      "targets": [
+        ["linkText=Набір для гри в піску з декоративною наліпкою GipGo Смайлик 3 предмети в асортименті", "linkText"],
+        ["css=#swiper-wrapper-f2515436210bd635b > .swiper-slide:nth-child(2) .ty-grid-list__description .product-title", "css:finder"],
+        ["xpath=//a[contains(text(),'Набір для гри в піску з декоративною наліпкою GipGo Смайлик 3 предмети в асортименті')]", "xpath:link"],
+        ["xpath=//div[@id='swiper-wrapper-f2515436210bd635b']/div[2]/div/div/div[2]/div/form/bdi/a", "xpath:idRelative"],
+        ["xpath=(//a[contains(@href, 'https://avrora.ua/nabir-dlya-gri-v-pisku-dekorativnoyu-nalipkoyu-gipgo-smaylik-3-predmeti/')])[2]", "xpath:href"],
+        ["xpath=//div[2]/div[2]/div/div/div[2]/div/div/div[2]/div/form/bdi/a", "xpath:position"],
+        ["xpath=//a[contains(.,'Набір для гри в піску з декоративною наліпкою GipGo Смайлик 3 предмети в асортименті')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "624caf22-161e-40ab-896f-70fc6a039d57",
+      "comment": "Verify text Набір для творчості Термомозаїка в асортименті",
+      "command": "verifyText",
+      "target": "linkText=Набір для творчості Термомозаїка в асортименті",
+      "targets": [],
+      "value": "Набір для творчості Термомозаїка в асортименті"
+    }, {
+      "id": "4b884cc0-736d-4b21-8ebf-f66900d0737c",
+      "comment": "Verify not text Набір для гри в піску",
+      "command": "verifyNotText",
+      "target": "linkText=Термомозаїка дитяча GipGo у відерці",
+      "targets": [],
+      "value": "Набір для гри в піску"
+    }, {
+      "id": "92e7d21a-3f8d-41f8-8a07-e1b9aa716413",
+      "comment": "Click Heart Fav 1",
+      "command": "click",
+      "target": "css=#top_icon_16582_510 > .ty-btn",
+      "targets": [
+        ["css=#top_icon_16582_510 > .ty-btn", "css:finder"],
+        ["xpath=//div[@id='top_icon_16582_510']/a", "xpath:idRelative"],
+        ["xpath=//form/div[2]/a", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "15b2728a-0ca9-4ef2-8aed-a91bddc552c2",
+      "comment": "Click Heart Fav 2",
+      "command": "click",
+      "target": "css=#top_icon_17866_510 > .ty-btn",
+      "targets": [
+        ["css=#top_icon_17866_510 > .ty-btn", "css:finder"],
+        ["xpath=//div[@id='top_icon_17866_510']/a", "xpath:idRelative"],
+        ["xpath=//div[3]/div/div/div[2]/div/form/div[2]/a", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "752efc20-bc28-48aa-a0ec-0649b5a5ed9c",
+      "comment": "Click Wishlist",
+      "command": "click",
+      "target": "id=wish_list_643",
+      "targets": [
+        ["id=wish_list_643", "id"],
+        ["linkText=7", "linkText"],
+        ["css=#wish_list_643", "css:finder"],
+        ["xpath=//a[@id='wish_list_643']", "xpath:attributes"],
+        ["xpath=//div[@id='tygh_main_container']/div[2]/div/div/div/div/div/div/div[4]/a", "xpath:idRelative"],
+        ["xpath=//a[contains(@href, 'https://avrora.ua/wishlist/')]", "xpath:href"],
+        ["xpath=//div[4]/div[2]/div/div/div/div/div/div/div[4]/a", "xpath:position"],
+        ["xpath=//a[contains(.,'7')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "a60ae4c5-1400-4a2f-89dd-0f0eef108f19",
+      "comment": "Verify nor editable search",
+      "command": "//verifyNotEditable",
+      "target": "id=search_input",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "f0d72e05-fb4b-40fc-aa02-6b60ad893aa6",
+      "comment": "Verify editable search",
+      "command": "verifyEditable",
+      "target": "id=search_input",
+      "targets": [],
+      "value": ""
+    }]
+  }, {
+    "id": "e30a83a8-9fff-4930-90e7-007c0fbdaa6e",
+    "name": "View Shop Details",
+    "commands": [{
+      "id": "73e48e5c-9e67-4388-8173-9fbaa5c9a77d",
+      "comment": "Open avrora.ua",
+      "command": "open",
+      "target": "/",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "bfd96242-917a-4728-8a6d-f2b7d2cde704",
+      "comment": "Click Магазини in fullscreen window",
+      "command": "click",
+      "target": "linkText=Магазини",
+      "targets": [
+        ["linkText=Магазини", "linkText"],
+        ["css=.local-shop-link", "css:finder"],
+        ["xpath=//a[contains(text(),'Магазини')]", "xpath:link"],
+        ["xpath=//div[@id='tygh_main_container']/div[2]/div/div/div/div/div/div/div[4]/div/div/a", "xpath:idRelative"],
+        ["xpath=//a[contains(@href, 'https://avrora.ua/magazyny/')]", "xpath:href"],
+        ["xpath=//div[4]/div[2]/div/div/div/div/div/div/div[4]/div/div/a", "xpath:position"],
+        ["xpath=//a[contains(.,'Магазини')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "c4a51cf5-2f9f-47e6-8558-a6a002ba37dc",
+      "comment": "Click Всі магазини",
+      "command": "click",
+      "target": "css=.shoplist_count > button",
+      "targets": [
+        ["css=.shoplist_count > button", "css:finder"],
+        ["xpath=//div[@id='moduleshops']/div[2]/div/button", "xpath:idRelative"],
+        ["xpath=//div[2]/div/div/div/div/div[2]/div/button", "xpath:position"],
+        ["xpath=//button[contains(.,'Всі магазини')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "1910f8af-b0db-4331-b065-5eac67818bf0",
+      "comment": "Click Аврора #1 Полтава, вул. Шевченка, 37",
+      "command": "click",
+      "target": "css=.shoplist_list--item:nth-child(1) strong",
+      "targets": [
+        ["css=.shoplist_list--item:nth-child(1) strong", "css:finder"],
+        ["xpath=//div[@id='moduleshops']/div[3]/div/div/div/div/strong", "xpath:idRelative"],
+        ["xpath=//div/strong", "xpath:position"],
+        ["xpath=//strong[contains(.,'Аврора #1')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "69916bb2-1b9a-4a52-8d22-57103e8fcd9a",
+      "comment": "Click Детальніше",
+      "command": "click",
+      "target": "linkText=Детальніше",
+      "targets": [
+        ["linkText=Детальніше", "linkText"],
+        ["css=.gm-style-iw-d .shoplist_list--link", "css:finder"],
+        ["xpath=(//a[contains(text(),'Детальніше')])[1424]", "xpath:link"],
+        ["xpath=//div[@id='map']/div/div[3]/div/div[2]/div/div[4]/div/div/div/div/div[2]/div/div/div[3]/a", "xpath:idRelative"],
+        ["xpath=(//a[contains(@href, 'index.php?dispatch=store_locator.view&store_location_id=1')])[90]", "xpath:href"],
+        ["xpath=//div[2]/div/div/div[3]/a", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "5c2d7086-b282-4afa-951a-c1a4daeda4aa",
+      "comment": "Verify text Магазин «Аврора» Полтава, вул. Шевченка, 37",
+      "command": "verifyText",
+      "target": "xpath=//div[@id='tygh_main_container']/div[3]/div/div[2]/div/div/h1",
+      "targets": [],
+      "value": "Магазин «Аврора» Полтава, вул. Шевченка, 37"
+    }, {
+      "id": "111b36c1-e535-4ee7-ab38-41c934613617",
+      "comment": "Assert element present Мапа",
+      "command": "assertElementPresent",
+      "target": "css=.gm-style > div > div:nth-child(2)",
+      "targets": [
+        ["css=.gm-style > div > div:nth-child(2)", "css:finder"],
+        ["xpath=//div[@id='map']/div/div[3]/div/div[2]", "xpath:idRelative"],
+        ["xpath=//div[2]/div/div[3]/div/div[2]", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "678e8d37-8714-42b3-9cc5-9c74d1b33398",
+      "comment": "Assert element present Графік роботи",
+      "command": "assertElementPresent",
+      "target": "css=.shoplist_list--content:nth-child(2) > p",
+      "targets": [
+        ["css=.shoplist_list--content:nth-child(2) > p", "css:finder"],
+        ["xpath=//div[@id='tygh_main_container']/div[3]/div/div[2]/div/div/div/div/div/div/div/div[2]/p", "xpath:idRelative"],
+        ["xpath=//div[2]/div/div/div/div/div/div/div/div[2]/p", "xpath:position"],
+        ["xpath=//p[contains(.,'ПН - НД 7:00 - 18:00')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "b236a0cd-a5c4-4c7b-a4e0-6409a7ed4c0b",
+      "comment": "Verify text Телефон",
+      "command": "verifyText",
+      "target": "linkText=0 800 300 066",
+      "targets": [],
+      "value": "0 800 300 066"
+    }, {
+      "id": "a8db033b-25a5-4bf1-be81-bde4b20bfff2",
+      "comment": "Click Прокласти маршрут",
+      "command": "click",
+      "target": "linkText=Прокласти маршрут",
+      "targets": [
+        ["linkText=Прокласти маршрут", "linkText"],
+        ["css=.shoplist_list--link", "css:finder"],
+        ["xpath=//a[contains(text(),'Прокласти маршрут')]", "xpath:link"],
+        ["xpath=//div[@id='tygh_main_container']/div[3]/div/div[2]/div/div/div/div/div/div/div/div[4]/a", "xpath:idRelative"],
+        ["xpath=//a[contains(@href, 'https://maps.google.com/maps?daddr=49.585117,34.544373')]", "xpath:href"],
+        ["xpath=//div[3]/div/div[2]/div/div/div/div/div/div/div/div[4]/a", "xpath:position"],
+        ["xpath=//a[contains(.,'Прокласти маршрут')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }]
+  }, {
+    "id": "9f5b8c1c-3bdb-4c9a-a492-71862503bce2",
+    "name": "FAQ Shipping",
+    "commands": [{
+      "id": "58a27e12-ba6e-4ff6-af8d-ba6780ce2fcf",
+      "comment": "Open avrora.ua",
+      "command": "open",
+      "target": "/",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "fd7573de-9d3b-423a-9364-dcb62694b6ea",
+      "comment": "Click Покупцям",
+      "command": "click",
+      "target": "xpath=//a[contains(text(),'Покупцям')]",
+      "targets": [
+        ["linkText=Покупцям", "linkText"],
+        ["css=#sw_dropdown_874 > a", "css:finder"],
+        ["xpath=//a[contains(text(),'Покупцям')]", "xpath:link"],
+        ["xpath=//div[@id='sw_dropdown_874']/a", "xpath:idRelative"],
+        ["xpath=//div[4]/div[2]/div/div/div/div/div/div/div[4]/div[2]/div/a", "xpath:position"],
+        ["xpath=//a[contains(.,'Покупцям')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "a7d51a9e-91c0-4212-aeac-49493bc55a17",
+      "comment": "Click Питання та відповіді",
+      "command": "click",
+      "target": "xpath=//a[contains(text(),'Питання та відповіді')]",
+      "targets": [
+        ["linkText=Питання та відповіді", "linkText"],
+        ["css=#text_links_874 > .ty-text-links__item:nth-child(1) > .ty-text-links__a", "css:finder"],
+        ["xpath=//a[contains(text(),'Питання та відповіді')]", "xpath:link"],
+        ["xpath=//ul[@id='text_links_874']/li/a", "xpath:idRelative"],
+        ["xpath=//a[contains(@href, 'https://avrora.ua/pitannya-ta-vidpovidi/')]", "xpath:href"],
+        ["xpath=//li/a", "xpath:position"],
+        ["xpath=//a[contains(.,'Питання та відповіді')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "9287d40b-f9ad-47a7-9a29-9f9de76b6bfd",
+      "comment": "Assert element present Доставка",
+      "command": "assertElementPresent",
+      "target": "css=.active > .faq-container-section__nav-item--title",
+      "targets": [
+        ["css=.active > .faq-container-section__nav-item--title", "css:finder"],
+        ["xpath=//div[@id='tygh_main_container']/div[3]/div/div[2]/div/div[2]/div/div/div", "xpath:idRelative"],
+        ["xpath=//div[3]/div/div[2]/div/div[2]/div/div/div", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "5957c410-ce5c-471b-8cf7-bb6bc603d850",
+      "comment": "Verify text Доставка",
+      "command": "verifyText",
+      "target": "css=#tab1 > .faq-container-section__content-item-element:nth-child(3) > .faq__content--title",
+      "targets": [
+        ["css=#tab1 > .faq-container-section__content-item-element:nth-child(3) > .faq__content--title", "css:finder"],
+        ["xpath=//div[@id='tab1']/details[3]/summary", "xpath:idRelative"],
+        ["xpath=//div[2]/div[2]/div/details[3]/summary", "xpath:position"]
+      ],
+      "value": "Де шукати номер ТТН?"
+    }, {
+      "id": "5ca29eb8-7180-46be-9733-003db04b89eb",
+      "comment": "Click Коли буде доставлено моє замовлення?",
+      "command": "click",
+      "target": "css=#tab1 > .faq-container-section__content-item-element:nth-child(1) > .faq__content--title",
+      "targets": [
+        ["css=#tab1 > .faq-container-section__content-item-element:nth-child(1) > .faq__content--title", "css:finder"],
+        ["xpath=//div[@id='tab1']/details/summary", "xpath:idRelative"],
+        ["xpath=//div[2]/div[2]/div/details/summary", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "0d4ef96a-d35b-40fa-8fc9-d6a193587f41",
+      "comment": "Click Як змінити адресу доставки?",
+      "command": "click",
+      "target": "css=#tab1 > .faq-container-section__content-item-element:nth-child(2) > .faq__content--title",
+      "targets": [
+        ["css=#tab1 > .faq-container-section__content-item-element:nth-child(2) > .faq__content--title", "css:finder"],
+        ["xpath=//div[@id='tab1']/details[2]/summary", "xpath:idRelative"],
+        ["xpath=//div[2]/div[2]/div/details[2]/summary", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "2dbdc096-23fb-4402-9993-b7750e243a50",
+      "comment": "Click Де шукати номер ТТН?",
+      "command": "click",
+      "target": "css=#tab1 > .faq-container-section__content-item-element:nth-child(3) > .faq__content--title",
+      "targets": [
+        ["css=#tab1 > .faq-container-section__content-item-element:nth-child(3) > .faq__content--title", "css:finder"],
+        ["xpath=//div[@id='tab1']/details[3]/summary", "xpath:idRelative"],
+        ["xpath=//div[2]/div[2]/div/details[3]/summary", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "3e44364f-9098-423f-ab9f-cde258f6a36e",
+      "comment": "Click Як я дізнаюся, що замовлення прибуло?",
+      "command": "click",
+      "target": "css=#tab1 > .faq-container-section__content-item-element:nth-child(4) > .faq__content--title",
+      "targets": [
+        ["css=#tab1 > .faq-container-section__content-item-element:nth-child(4) > .faq__content--title", "css:finder"],
+        ["xpath=//div[@id='tab1']/details[4]/summary", "xpath:idRelative"],
+        ["xpath=//div[2]/div[2]/div/details[4]/summary", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "50a0c709-3673-4e64-85bf-ca1d21371241",
+      "comment": "Click Як довго моє замовлення може зберігатися в магазині?",
+      "command": "click",
+      "target": "css=#tab1 > .faq-container-section__content-item-element:nth-child(5) > .faq__content--title",
+      "targets": [
+        ["css=#tab1 > .faq-container-section__content-item-element:nth-child(5) > .faq__content--title", "css:finder"],
+        ["xpath=//div[@id='tab1']/details[5]/summary", "xpath:idRelative"],
+        ["xpath=//div[2]/div[2]/div/details[5]/summary", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "afe78119-f292-4e85-aed1-66dd3f7461a4",
+      "comment": "Click Що робити, якщо я не можу знайти номер замовлення?",
+      "command": "click",
+      "target": "css=#tab1 > .faq-container-section__content-item-element:nth-child(6) > .faq__content--title",
+      "targets": [
+        ["css=#tab1 > .faq-container-section__content-item-element:nth-child(6) > .faq__content--title", "css:finder"],
+        ["xpath=//div[@id='tab1']/details[6]/summary", "xpath:idRelative"],
+        ["xpath=//div[2]/div[2]/div/details[6]/summary", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "0002c73b-dbd3-4436-8478-fb963fc0ab1e",
+      "comment": "Click Новинки",
+      "command": "click",
+      "target": "linkText=Новинки",
+      "targets": [
+        ["linkText=Новинки", "linkText"],
+        ["css=.ty-menu__item:nth-child(4) > .ty-menu__item-link", "css:finder"],
+        ["xpath=//a[contains(text(),'Новинки')]", "xpath:link"],
+        ["xpath=//div[@id='tygh_main_container']/div[2]/div/div/div/div[2]/div/ul/li[4]/a", "xpath:idRelative"],
+        ["xpath=//a[contains(@href, 'https://avrora.ua/novynky/')]", "xpath:href"],
+        ["xpath=//li[4]/a", "xpath:position"],
+        ["xpath=//a[contains(.,'Новинки')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "c9fcd32b-b817-43b7-94b5-1a26e5d726d2",
+      "comment": "Click Wishlist",
+      "command": "click",
+      "target": "id=wish_list_643",
+      "targets": [
+        ["id=wish_list_643", "id"],
+        ["linkText=0", "linkText"],
+        ["css=#wish_list_643", "css:finder"],
+        ["xpath=//a[@id='wish_list_643']", "xpath:attributes"],
+        ["xpath=//div[@id='tygh_main_container']/div[2]/div/div/div/div/div/div/div[4]/a", "xpath:idRelative"],
+        ["xpath=//a[contains(@href, 'https://avrora.ua/wishlist/')]", "xpath:href"],
+        ["xpath=//div[4]/div[2]/div/div/div/div/div/div/div[4]/a", "xpath:position"],
+        ["xpath=//a[contains(.,'0')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }]
+  }, {
+    "id": "1efd5155-5582-4326-827a-fd7d21ae2317",
+    "name": "* Notify when in stock",
+    "commands": [{
+      "id": "824e9592-0477-4afa-9b70-5b777e54ada5",
+      "comment": "Create Variable Name",
+      "command": "store",
+      "target": "Вікторія",
+      "targets": [],
+      "value": "Name"
+    }, {
+      "id": "b0049208-61b0-4183-887c-478b728b4f13",
+      "comment": "Create Variable Email",
+      "command": "store",
+      "target": "prayingforariot30@gmail.com",
+      "targets": [],
+      "value": "Email"
+    }, {
+      "id": "11c7b6af-50ca-43d6-afb9-2ccd066dad99",
+      "comment": "Open Вішалка стійка",
+      "command": "open",
+      "target": "https://avrora.ua/vishalka-stiyka-dlya-odyagu-z-policyami-peresuvna/",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "7c8f3223-c576-415a-8446-2f82a4ed4e4f",
+      "comment": "Assert element present Breadcrumbs",
+      "command": "assertElementPresent",
+      "target": "xpath=//div[@id='breadcrumbs_11']/div/div[4]/a/span",
+      "targets": [
+        ["css=.ty-breadcrumbs__a--wrap:nth-child(7) span", "css:finder"],
+        ["xpath=//div[@id='breadcrumbs_11']/div/div[4]/a/span", "xpath:idRelative"],
+        ["xpath=//div[4]/div[3]/div/div/div/div/div/div[4]/a/span", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "5bc2996a-78e1-46b6-914e-0491b54b32dc",
+      "comment": "Click breadcrumbs Органайзери для зберігання",
+      "command": "click",
+      "target": "css=.ty-breadcrumbs__a--wrap:nth-child(7) span",
+      "targets": [
+        ["css=.ty-breadcrumbs__a--wrap:nth-child(7) span", "css:finder"],
+        ["xpath=//div[@id='breadcrumbs_11']/div/div[4]/a/span", "xpath:idRelative"],
+        ["xpath=//div[4]/div[3]/div/div/div/div/div/div[4]/a/span", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "83f958ba-50ac-453b-92bf-864f8451450c",
+      "comment": "Click Чохол для одягу із спанбонду Це мені",
+      "command": "click",
+      "target": "linkText=Чохол для одягу із спанбонду Це мені 60х90 см в асортименті",
+      "targets": [
+        ["linkText=Чохол для одягу із спанбонду Це мені 60х90 см в асортименті", "linkText"],
+        ["css=.ty-column4:nth-child(10) .product-title", "css:finder"],
+        ["xpath=//a[contains(text(),'Чохол для одягу із спанбонду Це мені 60х90 см в асортименті')]", "xpath:link"],
+        ["xpath=//div[@id='read_more_1']/div/div[10]/div/div/div[2]/div/form/bdi/a", "xpath:idRelative"],
+        ["xpath=(//a[contains(@href, 'https://avrora.ua/chohol-dlya-odyagu-iz-spanbondu-ce-meni-60h90-sm-v-asortimenti/')])[2]", "xpath:href"],
+        ["xpath=//div[10]/div/div/div[2]/div/form/bdi/a", "xpath:position"],
+        ["xpath=//a[contains(.,'Чохол для одягу із спанбонду Це мені 60х90 см в асортименті')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "7c14f474-0237-4384-9691-24987226fb4f",
+      "comment": "Verify text Повідомити про появу",
+      "command": "verifyText",
+      "target": "linkText=Повідомити про появу",
+      "targets": [
+        ["linkText=Повідомити про появу", "linkText"],
+        ["css=.notify-popup__link", "css:finder"],
+        ["xpath=//a[contains(text(),'Повідомити про появу')]", "xpath:link"],
+        ["xpath=//div[@id='add_to_cart_update_1301']/div/a", "xpath:idRelative"],
+        ["xpath=//div[5]/div[3]/div/div/a", "xpath:position"],
+        ["xpath=//a[contains(.,'Повідомити про появу')]", "xpath:innerText"]
+      ],
+      "value": "Повідомити про появу"
+    }, {
+      "id": "86fbc387-9590-4b76-a19b-0ca3014d524a",
+      "comment": "Verify not text Купити",
+      "command": "verifyNotText",
+      "target": "linkText=Повідомити про появу",
+      "targets": [
+        ["linkText=Повідомити про появу", "linkText"],
+        ["css=.notify-popup__link", "css:finder"],
+        ["xpath=//a[contains(text(),'Повідомити про появу')]", "xpath:link"],
+        ["xpath=//div[@id='add_to_cart_update_1301']/div/a", "xpath:idRelative"],
+        ["xpath=//div[5]/div[3]/div/div/a", "xpath:position"],
+        ["xpath=//a[contains(.,'Повідомити про появу')]", "xpath:innerText"]
+      ],
+      "value": "Купити"
+    }, {
+      "id": "6626eb6d-3fd6-476e-9e8a-322681143759",
+      "comment": "Assert element not present У кошик",
+      "command": "assertElementNotPresent",
+      "target": "id=button_cart_2400",
+      "targets": [
+        ["id=button_cart_2400", "id"],
+        ["name=dispatch[checkout.add..2400]", "name"],
+        ["css=#button_cart_2400", "css:finder"],
+        ["xpath=//button[@id='button_cart_2400']", "xpath:attributes"],
+        ["xpath=//div[@id='add_to_cart_update_2400']/button", "xpath:idRelative"],
+        ["xpath=//div[5]/div[3]/div/button", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "878f32a7-29e2-480d-8f16-c1c7228eccd1",
+      "comment": "Click Повідомити про появу",
+      "command": "click",
+      "target": "linkText=Повідомити про появу",
+      "targets": [
+        ["linkText=Повідомити про появу", "linkText"],
+        ["css=.notify-popup__link", "css:finder"],
+        ["xpath=//a[contains(text(),'Повідомити про появу')]", "xpath:link"],
+        ["xpath=//div[@id='add_to_cart_update_1301']/div/a", "xpath:idRelative"],
+        ["xpath=//div[5]/div[3]/div/div/a", "xpath:position"],
+        ["xpath=//a[contains(.,'Повідомити про появу')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "29b228dc-2e9e-4749-8fff-ca30b053995d",
+      "comment": "Verify Not Editable Button",
+      "command": "//verifyNotEditable",
+      "target": "name=dispatch[products.product_notifications]",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "295e8a24-4257-4782-84bc-eb1988299218",
+      "comment": "Verify editable Name",
+      "command": "verifyEditable",
+      "target": "id=product_notify_name_1301_popup",
+      "targets": [
+        ["id=product_notify_name_1301_popup", "id"],
+        ["name=name", "name"],
+        ["css=#product_notify_name_1301_popup", "css:finder"],
+        ["xpath=//input[@id='product_notify_name_1301_popup']", "xpath:attributes"],
+        ["xpath=//div[@id='notify_popup']/div/div[2]/input", "xpath:idRelative"],
+        ["xpath=//div[2]/input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "4729a3c7-aa0b-452f-8cb2-0f727ffc5bc6",
+      "comment": "Enter Variable Name",
+      "command": "type",
+      "target": "//*[@id=\"product_notify_name_1301_popup\"]",
+      "targets": [
+        ["id=product_notify_name_1301_popup", "id"],
+        ["name=name", "name"],
+        ["css=#product_notify_name_1301_popup", "css:finder"],
+        ["xpath=//input[@id='product_notify_name_1301_popup']", "xpath:attributes"],
+        ["xpath=//div[@id='notify_popup']/div/div[2]/input", "xpath:idRelative"],
+        ["xpath=//div[2]/input", "xpath:position"]
+      ],
+      "value": "${Name}"
+    }, {
+      "id": "fb4573ae-ce6a-40f4-a669-78c3e8f27f6b",
+      "comment": "Enter Variable Email",
+      "command": "type",
+      "target": "//*[@id=\"product_notify_email_1301\"]",
+      "targets": [
+        ["id=product_notify_name_1301_popup", "id"],
+        ["name=name", "name"],
+        ["css=#product_notify_name_1301_popup", "css:finder"],
+        ["xpath=//input[@id='product_notify_name_1301_popup']", "xpath:attributes"],
+        ["xpath=//div[@id='notify_popup']/div/div[2]/input", "xpath:idRelative"],
+        ["xpath=//div[2]/input", "xpath:position"]
+      ],
+      "value": "${Email}"
+    }, {
+      "id": "b74e0400-8578-4eae-a1a6-33b86e081754",
+      "comment": "Click Відправити",
+      "command": "click",
+      "target": "name=dispatch[products.product_notifications]",
+      "targets": [
+        ["name=dispatch[products.product_notifications]", "name"],
+        ["css=.cm-dialog-closer", "css:finder"],
+        ["xpath=//button[@name='dispatch[products.product_notifications]']", "xpath:attributes"],
+        ["xpath=//div[@id='notify_popup']/div/button", "xpath:idRelative"],
+        ["xpath=//div[2]/div[2]/div/button", "xpath:position"],
+        ["xpath=//button[contains(.,'Відправити')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }]
+  }, {
+    "id": "5b790821-26f1-435e-a01f-c1d65003ab9c",
+    "name": "Subscribe to special offers",
+    "commands": [{
+      "id": "dbb1f30b-9283-43dd-bb84-3db03054c254",
+      "comment": "Create Variable Email",
+      "command": "store",
+      "target": "prayingforariot30@gmail.com",
+      "targets": [],
+      "value": "Email"
+    }, {
+      "id": "caa6dce9-3bbe-41c9-b5d3-f02233eb9749",
+      "comment": "Open avrora.ua",
+      "command": "open",
+      "target": "/",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "63db7546-88b9-4172-ac56-55d501af52ad",
+      "comment": "Click Wishlist",
+      "command": "click",
+      "target": "id=wish_list_643",
+      "targets": [
+        ["id=wish_list_643", "id"],
+        ["linkText=0", "linkText"],
+        ["css=#wish_list_643", "css:finder"],
+        ["xpath=//a[@id='wish_list_643']", "xpath:attributes"],
+        ["xpath=//div[@id='tygh_main_container']/div[2]/div/div/div/div/div/div/div[4]/a", "xpath:idRelative"],
+        ["xpath=//a[contains(@href, 'https://avrora.ua/wishlist/')]", "xpath:href"],
+        ["xpath=//div[4]/div[2]/div/div/div/div/div/div/div[4]/a", "xpath:position"],
+        ["xpath=//a[contains(.,'0')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "48d5b65d-873b-4320-b137-d1b31d7a6325",
+      "comment": "Assert element present Підпишись на новини та акції",
+      "command": "assertElementPresent",
+      "target": "css=#sw_footer-general_56 > span",
+      "targets": [
+        ["css=#sw_footer-general_56 > span", "css:finder"],
+        ["xpath=//div[@id='sw_footer-general_56']/span", "xpath:idRelative"],
+        ["xpath=//div[4]/div[4]/div[4]/div/div/div/div/div[5]/div/div/span", "xpath:position"],
+        ["xpath=//span[contains(.,'Підпишись на новини та акції')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "0b4d4670-4c2f-464d-8ac5-17088f5e4104",
+      "comment": "Verify text Ми надсилаємо тільки найкращі пропозиції для шопінгу",
+      "command": "verifyText",
+      "target": "css=.ty-footer-form-block__p",
+      "targets": [
+        ["css=.ty-footer-form-block__p", "css:finder"],
+        ["xpath=//div[@id='footer-general_56']/div/form/p", "xpath:idRelative"],
+        ["xpath=//form/p", "xpath:position"],
+        ["xpath=//p[contains(.,'Ми надсилаємо тільки найкращі пропозиції для шопінгу')]", "xpath:innerText"]
+      ],
+      "value": "Ми надсилаємо тільки найкращі пропозиції для шопінгу"
+    }, {
+      "id": "2985ac79-154f-4e7f-b052-6312fca9572a",
+      "comment": "Click Підпишись на новини та акції",
+      "command": "click",
+      "target": "id=subscr_email56",
+      "targets": [
+        ["id=subscr_email56", "id"],
+        ["name=subscribe_email", "name"],
+        ["css=#subscr_email56", "css:finder"],
+        ["xpath=//input[@id='subscr_email56']", "xpath:attributes"],
+        ["xpath=//div[@id='footer-general_56']/div/form/div/div/input", "xpath:idRelative"],
+        ["xpath=//form/div/div/input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "653698a8-5c70-4462-b91f-4944fa8eaeda",
+      "comment": "Type variable Email",
+      "command": "type",
+      "target": "id=subscr_email56",
+      "targets": [
+        ["id=subscr_email56", "id"],
+        ["name=subscribe_email", "name"],
+        ["css=#subscr_email56", "css:finder"],
+        ["xpath=//input[@id='subscr_email56']", "xpath:attributes"],
+        ["xpath=//div[@id='footer-general_56']/div/form/div/div/input", "xpath:idRelative"],
+        ["xpath=//form/div/div/input", "xpath:position"]
+      ],
+      "value": "${Email}"
+    }, {
+      "id": "14824568-3501-443e-bc01-f3181a26b6fc",
+      "comment": "Click Підписатися",
+      "command": "click",
+      "target": "xpath=//button[contains(.,'Підписатися')]",
+      "targets": [
+        ["css=.ty-btn-go", "css:finder"],
+        ["xpath=(//button[@type='submit'])[68]", "xpath:attributes"],
+        ["xpath=//div[@id='footer-general_56']/div/form/div/div/button", "xpath:idRelative"],
+        ["xpath=//div[5]/div/div[2]/div/form/div/div/button", "xpath:position"],
+        ["xpath=//button[contains(.,'Підписатися')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "288fe952-049b-491a-b510-6f0eb940036f",
+      "comment": "Click close ",
+      "command": "click",
+      "target": "css=.cm-notification-close",
+      "targets": [
+        ["css=.cm-notification-close", "css:finder"],
+        ["xpath=(//button[@type='button'])[2]", "xpath:attributes"],
+        ["xpath=//div[@id='tygh_container']/div[3]/div/button", "xpath:idRelative"],
+        ["xpath=//div[4]/div[3]/div/button", "xpath:position"],
+        ["xpath=//button[contains(.,'×')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "34747a16-4b18-4321-84b9-a2685392323d",
+      "comment": "Click Акції",
+      "command": "click",
+      "target": "linkText=Акції",
+      "targets": [
+        ["linkText=Акції", "linkText"],
+        ["css=.ty-menu__item:nth-child(10) > .ty-menu__item-link", "css:finder"],
+        ["xpath=//a[contains(text(),'Акції')]", "xpath:link"],
+        ["xpath=//div[@id='tygh_main_container']/div[2]/div/div/div/div[2]/div/ul/li[10]/a", "xpath:idRelative"],
+        ["xpath=//a[contains(@href, 'https://avrora.ua/akcii/')]", "xpath:href"],
+        ["xpath=//li[10]/a", "xpath:position"],
+        ["xpath=//a[contains(.,'Акції')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }]
+  }, {
+    "id": "aa7bc970-74f2-4e2f-a0e2-29c1f298d41f",
+    "name": "Find product by filtres",
+    "commands": [{
+      "id": "22b3bab7-98fc-4a13-be93-9eea0e822108",
+      "comment": "",
+      "command": "open",
+      "target": "/",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "9308eecc-fbfd-402d-a2ef-3149a8dff475",
+      "comment": "Click Всі товари",
+      "command": "click",
+      "target": "linkText=Всі товари",
+      "targets": [
+        ["linkText=Всі товари", "linkText"],
+        ["css=.res-clicker:nth-child(2) .header__menu-opener-button-text", "css:finder"],
+        ["xpath=//a[contains(text(),'Всі товари')]", "xpath:link"],
+        ["xpath=//div[@id='tygh_main_container']/div[2]/div/div/div/div/div/div/div[2]/div[2]/div/a", "xpath:idRelative"],
+        ["xpath=//div[2]/div[2]/div/a", "xpath:position"],
+        ["xpath=//a[contains(.,'Всі товари')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "c261f308-a23f-4e58-bcb4-3f6c8f5dadbe",
+      "comment": "Click Товари для кухні",
+      "command": "click",
+      "target": "xpath=//span[contains(.,'Товари для кухні')]",
+      "targets": [
+        ["css=#\\32 13 span", "css:finder"],
+        ["xpath=//div[@id='213']/a/span", "xpath:idRelative"],
+        ["xpath=//div[4]/a/span", "xpath:position"],
+        ["xpath=//span[contains(.,'Товари для кухні')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "bc56bbac-be09-434c-b6ae-effc6a04fb67",
+      "comment": "Click Форми для випікання",
+      "command": "click",
+      "target": "linkText=Форми для випікання",
+      "targets": [
+        ["linkText=Форми для випікання", "linkText"],
+        ["css=.category-items:nth-child(4) li:nth-child(2) > .category-items-name", "css:finder"],
+        ["xpath=(//a[contains(text(),'Форми для випікання')])[2]", "xpath:link"],
+        ["xpath=//div[@id='tygh_main_container']/div[3]/div/div[4]/div/div[2]/ul/li[4]/ul/li[2]/a", "xpath:idRelative"],
+        ["xpath=(//a[contains(@href, 'https://avrora.ua/formi-dlya-vipikannya/')])[3]", "xpath:href"],
+        ["xpath=//li[4]/ul/li[2]/a", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "978e0f8b-b478-4563-869f-8f9c7d462def",
+      "comment": "Assert element present Фільтри",
+      "command": "assertElementPresent",
+      "target": "css=#product_filters_32 > .ty-product-filters__wrapper",
+      "targets": [
+        ["css=#product_filters_32 > .ty-product-filters__wrapper", "css:finder"],
+        ["xpath=//div[@id='product_filters_32']/div", "xpath:idRelative"],
+        ["xpath=//div[6]/div/div[3]/div", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "6e8f82c1-2426-4b42-a756-9712c384432e",
+      "comment": "Click filter Кругла",
+      "command": "click",
+      "target": "xpath=//span[contains(.,'Кругла')]",
+      "targets": [
+        ["css=#ranges_32_83 > .cm-product-filters-checkbox-container:nth-child(2) > label > span:nth-child(2)", "css:finder"],
+        ["xpath=//ul[@id='ranges_32_83']/li[2]/label/span[2]", "xpath:idRelative"],
+        ["xpath=//li[2]/label/span[2]", "xpath:position"],
+        ["xpath=//span[contains(.,'Кругла')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "8b5a595b-b833-4698-8c7a-bc275fc5617c",
+      "comment": "Click filter Ціна",
+      "command": "click",
+      "target": "xpath=//span[contains(.,'150-199 грн')]",
+      "targets": [
+        ["css=#ranges_32_72 > .cm-product-filters-checkbox-container:nth-child(4) > label > span:nth-child(2)", "css:finder"],
+        ["xpath=//ul[@id='ranges_32_72']/li[4]/label/span[2]", "xpath:idRelative"],
+        ["xpath=//div[3]/ul/li/ul/li[4]/label/span[2]", "xpath:position"],
+        ["xpath=//span[contains(.,'150-199 грн')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "3d4a7469-4d4e-4e8d-82c2-0a09a61efe6e",
+      "comment": "Click filter В наявності'",
+      "command": "click",
+      "target": "xpath=//span[contains(.,'В наявності')]",
+      "targets": [
+        ["css=#ranges_32_64 label > span:nth-child(2)", "css:finder"],
+        ["xpath=//ul[@id='ranges_32_64']/li/label/span[2]", "xpath:idRelative"],
+        ["xpath=//div[9]/ul/li/ul/li/label/span[2]", "xpath:position"],
+        ["xpath=//span[contains(.,'В наявності')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "b7ef9768-1893-49d9-894e-5bb1f34cefb5",
+      "comment": "Remove filter Ціна",
+      "command": "click",
+      "target": "css=#selected_filters_68_470 .cm-product-filters-checkbox-container:nth-child(2) > label",
+      "targets": [
+        ["css=#selected_filters_68_470 .cm-product-filters-checkbox-container:nth-child(2) > label", "css:finder"],
+        ["xpath=//div[@id='selected_filters_68_470']/div/span[2]/label", "xpath:idRelative"],
+        ["xpath=//span[2]/label", "xpath:position"],
+        ["xpath=//label[contains(.,'150-199 грн')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "d403c106-e05b-4007-8498-67bd05b3ef16",
+      "comment": "Verify text Форма для випічки Шарлотка 31х3 см",
+      "command": "verifyText",
+      "target": "linkText=Форма для випічки Шарлотка 31х3 см",
+      "targets": [
+        ["linkText=Форма для випічки Шарлотка 31х3 см", "linkText"],
+        ["css=.ty-column4:nth-child(1) .product-title", "css:finder"],
+        ["xpath=//a[contains(text(),'Форма для випічки Шарлотка 31х3 см')]", "xpath:link"],
+        ["xpath=//div[@id='read_more_1']/div/div/div/div/div[2]/div/form/bdi/a", "xpath:idRelative"],
+        ["xpath=(//a[contains(@href, 'https://avrora.ua/forma-dlya-vipichki-sharlotka-31h3-sm/')])[2]", "xpath:href"],
+        ["xpath=//bdi/a", "xpath:position"],
+        ["xpath=//a[contains(.,'Форма для випічки Шарлотка 31х3 см')]", "xpath:innerText"]
+      ],
+      "value": "Форма для випічки Шарлотка 31х3 см"
+    }, {
+      "id": "27bde959-0034-44ea-9a77-f8951da0b662",
+      "comment": "Click Форма для випічки Шарлотка 31х3 см",
+      "command": "click",
+      "target": "linkText=Форма для випічки Шарлотка 31х3 см",
+      "targets": [
+        ["linkText=Форма для випічки Шарлотка 31х3 см", "linkText"],
+        ["css=.ty-column4:nth-child(1) .product-title", "css:finder"],
+        ["xpath=//a[contains(text(),'Форма для випічки Шарлотка 31х3 см')]", "xpath:link"],
+        ["xpath=//div[@id='read_more_1']/div/div/div/div/div[2]/div/form/bdi/a", "xpath:idRelative"],
+        ["xpath=(//a[contains(@href, 'https://avrora.ua/forma-dlya-vipichki-sharlotka-31h3-sm/')])[2]", "xpath:href"],
+        ["xpath=//bdi/a", "xpath:position"],
+        ["xpath=//a[contains(.,'Форма для випічки Шарлотка 31х3 см')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "547227bc-9d60-4a8b-b758-752d757903d8",
+      "comment": "Click У кошик",
+      "command": "click",
+      "target": "id=button_cart_4304",
+      "targets": [
+        ["id=button_cart_4304", "id"],
+        ["name=dispatch[checkout.add..4304]", "name"],
+        ["css=#button_cart_4304", "css:finder"],
+        ["xpath=//button[@id='button_cart_4304']", "xpath:attributes"],
+        ["xpath=//div[@id='add_to_cart_update_4304']/button", "xpath:idRelative"],
+        ["xpath=//div[5]/div[3]/div/button", "xpath:position"]
+      ],
+      "value": ""
+    }]
+  }],
+  "suites": [{
+    "id": "f2946a7e-3456-4005-afec-d5ae22b09e03",
+    "name": "Default Suite",
+    "persistSession": false,
+    "parallel": false,
+    "timeout": 300,
+    "tests": ["3eeb06b5-9198-4e99-b45a-138c94982ff2"]
+  }],
+  "urls": ["https://avrora.ua/"],
+  "plugins": []
+}
